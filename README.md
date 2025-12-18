@@ -121,4 +121,5 @@ Department of Computer Science, Srinakharinwirot University
 - Kunanon Hareutaitam - kunanon.mas@g.swu.ac.th
 - Renuka Pollok - renuka.pollok@g.swu.ac.th
 - Iladageokping Chua - iladageokping.chua@g.swu.ac.th
+- Jinnapat Thongbanguay - jinnapat.thongbanguay@g.swu.ac.th
 
