@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# 🧸 Youngtoy Webshop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Youngtoy Webshop คือเว็บแอปร้านค้าออนไลน์ (Webshop) สำหรับแสดงสินค้า จัดการตะกร้าสินค้า และทำรายการสั่งซื้อ เหมาะสำหรับใช้เป็นโปรเจกต์ฝึกทำเว็บหรือระบบร้านค้าออนไลน์ขนาดเล็ก
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- แสดงรายการสินค้า
+- ดูรายละเอียดสินค้า
+- ระบบตะกร้าสินค้า (Cart)
+- ระบบสั่งซื้อสินค้า
+- ระบบชำระเงิน
+- พิมพ์ใบสั่งซื้อ / ใบเสร็จ
+- ใช้งานร่วมกับฐานข้อมูล MySQL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap 5  
+- **Backend:** PHP  
+- **Database:** MySQL  
+- **Additional:** Node.js / React (บางส่วนของโปรเจกต์)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Youngtoy_webshop/
+├── admin/
+├── bootstrap-5.3.3-dist/
+├── image/
+├── public/
+├── src/
+├── cart.php
+├── condb.php
+├── menu.php
+├── menu.css
+├── show_product.php
+├── insert_cart.php
+├── order.php
+├── payment.php
+├── insertpayment.php
+├── print_order.php
+├── package.json
+├── .gitignore
+└── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Installation
 
-### `npm run eject`
+### 1️⃣ Clone Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/Thizler/Youngtoy_webshop.git
+```
+2️⃣ Setup Database
+สร้างฐานข้อมูลใน MySQL
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Import ตารางฐานข้อมูล (ถ้ามีไฟล์ SQL)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+แก้ไขไฟล์ condb.php
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "your_database_name";
 
-## Learn More
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
+```
+3️⃣ Run with XAMPP / WAMP / MAMP
+ย้ายโฟลเดอร์โปรเจกต์ไปที่ htdocs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+เปิด Apache และ MySQL
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+เข้าเว็บผ่านเบราว์เซอร์
 
-### Code Splitting
+```
+http://localhost/Youngtoy_webshop
+```
+⚛️ Run React (Optional)
+หากต้องการรันส่วนที่เป็น React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+npm start
+```
+```
+http://localhost:3000
+```
+📄 Pages Overview
+show_product.php — หน้าแสดงสินค้า
 
-### Analyzing the Bundle Size
+cart.php — หน้าตะกร้าสินค้า
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+order.php — หน้าสั่งซื้อสินค้า
 
-### Making a Progressive Web App
+payment.php — หน้าชำระเงิน
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+print_order.php — พิมพ์ใบสั่งซื้อ
 
-### Advanced Configuration
+💡 Future Improvements
+เพิ่มระบบ Login / Register
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ระบบจัดการสินค้า (Admin Dashboard)
 
-### Deployment
+เชื่อมต่อระบบชำระเงินจริง (Payment Gateway)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ปรับ UI/UX ให้รองรับมือถือมากขึ้น
